@@ -1,0 +1,85 @@
+import type { Landmark, PhysicalFeature, ResourceLink } from './india';
+
+export const WORLD_LANDMARKS: Landmark[] = [
+  { id: 'eiffel', name: 'Eiffel Tower', where: 'FRA', emoji: '🗼', fact: 'The Eiffel Tower in Paris is made of iron. It was built in 1889.' },
+  { id: 'greatwall', name: 'Great Wall', where: 'CHN', emoji: '🧱', fact: 'The Great Wall of China was built over hundreds of years to protect China. It is thousands of kilometres long.' },
+  { id: 'pyramids', name: 'Pyramids of Giza', where: 'EGY', emoji: '🔺', fact: 'The Pyramids of Giza in Egypt were built as tombs for kings called pharaohs.' },
+  { id: 'liberty', name: 'Statue of Liberty', where: 'USA', emoji: '🗽', fact: 'The Statue of Liberty in New York was a gift from France to the USA.' },
+  { id: 'bigben', name: 'Big Ben', where: 'GBR', emoji: '🕰️', fact: 'Big Ben is the great bell in the clock tower in London.' },
+  { id: 'colosseum', name: 'Colosseum', where: 'ITA', emoji: '🏟️', fact: 'The Colosseum in Rome is an ancient arena almost 2,000 years old.' },
+  { id: 'pisa', name: 'Leaning Tower of Pisa', where: 'ITA', emoji: '🗼', fact: 'The Leaning Tower of Pisa tilts because the ground under it is soft.' },
+  { id: 'operahouse', name: 'Sydney Opera House', where: 'AUS', emoji: '🎭', fact: 'The Sydney Opera House roof looks like sails of a ship.' },
+  { id: 'christ', name: 'Christ the Redeemer', where: 'BRA', emoji: '⛰️', fact: 'This giant statue stands on a mountain above Rio de Janeiro in Brazil.' },
+  { id: 'machupicchu', name: 'Machu Picchu', where: 'PER', emoji: '⛰️', fact: 'Machu Picchu is an ancient Inca city high in the Andes mountains of Peru.' },
+  { id: 'tajmahal-w', name: 'Taj Mahal', where: 'IND', emoji: '🕌', fact: 'The Taj Mahal in Agra, India, is made of white marble.' },
+  { id: 'marinabay', name: 'Marina Bay Sands', where: 'SGP', emoji: '🏨', fact: 'Marina Bay Sands in Singapore has a giant "ship" across the top of three towers, with a pool in the sky!' },
+  { id: 'merlion', name: 'Merlion', where: 'SGP', emoji: '🦁', fact: 'The Merlion is half lion, half fish. It is the symbol of Singapore.' },
+  { id: 'gardensbay', name: 'Gardens by the Bay', where: 'SGP', emoji: '🌳', fact: 'Gardens by the Bay in Singapore has giant metal Supertrees that light up at night.' },
+  { id: 'gyeongbokgung', name: 'Gyeongbokgung Palace', where: 'KOR', emoji: '🏯', fact: 'Gyeongbokgung is the biggest royal palace in Seoul, built more than 600 years ago.' },
+  { id: 'nseoultower', name: 'N Seoul Tower', where: 'KOR', emoji: '🗼', fact: 'N Seoul Tower stands on a mountain in the middle of Seoul.' },
+  { id: 'taipei101', name: 'Taipei 101', where: 'TWN', emoji: '🏙️', fact: 'Taipei 101 has 101 floors and a giant golden ball inside that keeps it steady in typhoons and earthquakes.' },
+  { id: 'borobudur', name: 'Borobudur', where: 'IDN', emoji: '🛕', fact: 'Borobudur in Indonesia is the biggest Buddhist temple in the world.' },
+  { id: 'angkorwat', name: 'Angkor Wat', where: 'KHM', emoji: '🛕', fact: 'Angkor Wat in Cambodia is the biggest religious monument in the world.' },
+  { id: 'burjkhalifa', name: 'Burj Khalifa', where: 'ARE', emoji: '🏙️', fact: 'The Burj Khalifa in Dubai is the tallest building in the world - 828 metres!' },
+  { id: 'fuji', name: 'Mount Fuji', where: 'JPN', emoji: '🗻', fact: 'Mount Fuji is Japan\'s tallest mountain - and a volcano with a snowy top.' },
+  { id: 'petronas', name: 'Petronas Twin Towers', where: 'MYS', emoji: '🏢', fact: 'The Petronas Twin Towers in Kuala Lumpur are joined by a sky bridge.' },
+  { id: 'stonehenge', name: 'Stonehenge', where: 'GBR', emoji: '🪨', fact: 'Stonehenge is a ring of giant stones put up about 4,500 years ago.' },
+  { id: 'stbasil', name: 'St. Basil\'s Cathedral', where: 'RUS', emoji: '🏰', fact: 'St. Basil\'s Cathedral in Moscow has colourful onion-shaped domes.' },
+  { id: 'chichenitza', name: 'Chichén Itzá', where: 'MEX', emoji: '🔺', fact: 'Chichén Itzá is a stepped pyramid built by the Maya people.' },
+  { id: 'acropolis', name: 'Acropolis', where: 'GRC', emoji: '🏛️', fact: 'The Acropolis in Athens has the ancient Parthenon temple.' },
+  { id: 'sagrada', name: 'Sagrada Família', where: 'ESP', emoji: '⛪', fact: 'The Sagrada Família church in Barcelona has been under construction since 1882!' },
+  { id: 'petra', name: 'Petra', where: 'JOR', emoji: '🏜️', fact: 'Petra is an ancient city carved into pink rock cliffs.' },
+  { id: 'uluru', name: 'Uluru', where: 'AUS', emoji: '🪨', fact: 'Uluru is a giant red rock in the middle of Australia, sacred to Aboriginal people.' },
+  { id: 'goldengate', name: 'Golden Gate Bridge', where: 'USA', emoji: '🌉', fact: 'The Golden Gate Bridge in San Francisco is painted orange, not gold!' },
+  { id: 'neuschwanstein', name: 'Neuschwanstein Castle', where: 'DEU', emoji: '🏰', fact: 'Neuschwanstein Castle in Germany looks like a fairy-tale castle.' },
+  { id: 'kilimanjaro', name: 'Mount Kilimanjaro', where: 'TZA', emoji: '🏔️', fact: 'Kilimanjaro is the highest mountain in Africa, with snow on top even near the Equator.' },
+];
+
+export const WORLD_RESOURCES: ResourceLink[] = [
+  { id: 'w-coffee', resource: 'Coffee', emoji: '☕', answer: 'BRA', alsoOk: ['VNM', 'COL', 'IDN', 'ETH'], fact: 'Brazil grows more coffee than any other country.' },
+  { id: 'w-cocoa', resource: 'Cocoa (for chocolate)', emoji: '🍫', answer: 'CIV', alsoOk: ['GHA', 'IDN', 'NGA', 'CMR'], fact: 'Côte d\'Ivoire grows the most cocoa beans, which are made into chocolate.' },
+  { id: 'w-oil', resource: 'Oil', emoji: '🛢️', answer: 'SAU', alsoOk: ['USA', 'RUS', 'IRQ', 'IRN', 'ARE', 'KWT', 'CAN', 'VEN', 'QAT', 'NGA', 'CHN', 'DZA', 'LBY', 'KAZ', 'OMN', 'MEX', 'BRA', 'NOR'], fact: 'Saudi Arabia has huge amounts of oil under its deserts and sells more oil to other countries than anyone.' },
+  { id: 'w-maple', resource: 'Maple syrup', emoji: '🍁', answer: 'CAN', alsoOk: ['USA'], fact: 'Canada makes most of the world\'s maple syrup from the sap of maple trees. A maple leaf is on its flag!' },
+  { id: 'w-copper', resource: 'Copper', emoji: '🟠', answer: 'CHL', alsoOk: ['PER', 'COD', 'CHN', 'USA', 'ZMB', 'AUS', 'RUS', 'MEX', 'KAZ'], fact: 'Chile digs up more copper than any other country. Copper is used in electric wires.' },
+  { id: 'w-ironore', resource: 'Iron ore', emoji: '🔩', answer: 'AUS', alsoOk: ['BRA', 'CHN', 'IND', 'RUS', 'ZAF', 'UKR', 'CAN', 'IRN', 'SWE', 'KAZ'], fact: 'Australia digs up the most iron ore, which is used to make steel.' },
+  { id: 'w-diamonds', resource: 'Diamonds', emoji: '💎', answer: 'BWA', alsoOk: ['RUS', 'COD', 'CAN', 'AUS', 'ZAF', 'AGO', 'NAM', 'SLE', 'ZWE', 'IND'], fact: 'Botswana in Africa is famous for its diamond mines.' },
+  { id: 'w-rubber', resource: 'Natural rubber', emoji: '🌳', answer: 'THA', alsoOk: ['IDN', 'VNM', 'IND', 'MYS', 'CHN', 'CIV', 'PHL', 'LKA'], fact: 'Thailand produces the most natural rubber, from rubber trees.' },
+  { id: 'w-palmoil', resource: 'Palm oil', emoji: '🌴', answer: 'IDN', alsoOk: ['MYS', 'THA', 'COL', 'NGA', 'PNG'], fact: 'Indonesia makes the most palm oil, used in soap and many foods.' },
+  { id: 'w-bananas', resource: 'Bananas', emoji: '🍌', answer: 'IND', alsoOk: ['CHN', 'IDN', 'BRA', 'ECU', 'PHL', 'COL', 'GTM', 'CRI', 'AGO', 'TZA'], fact: 'India grows more bananas than any other country!' },
+  { id: 'w-tea', resource: 'Tea', emoji: '🍵', answer: 'CHN', alsoOk: ['IND', 'KEN', 'LKA', 'TUR', 'VNM', 'IDN', 'JPN'], fact: 'China grows the most tea, and India is second. Tea was first drunk in China.' },
+  { id: 'w-gas', resource: 'Natural gas', emoji: '🔥', answer: 'QAT', alsoOk: ['RUS', 'USA', 'IRN', 'CHN', 'CAN', 'SAU', 'NOR', 'AUS', 'DZA', 'TKM', 'ARE'], fact: 'Tiny Qatar has one of the biggest gas fields on Earth.' },
+  { id: 'w-salmon', resource: 'Salmon fish', emoji: '🐟', answer: 'NOR', alsoOk: ['CHL', 'GBR', 'CAN', 'USA', 'RUS', 'ISL', 'IRL'], fact: 'Norway raises the most salmon, in its cold fjords.' },
+  { id: 'w-olive', resource: 'Olive oil', emoji: '🫒', answer: 'ESP', alsoOk: ['ITA', 'GRC', 'TUN', 'TUR', 'MAR', 'PRT'], fact: 'Spain makes the most olive oil in the world.' },
+  { id: 'w-chips', resource: 'Computer chips', emoji: '💻', answer: 'TWN', alsoOk: ['KOR', 'CHN', 'USA', 'JPN', 'SGP', 'MYS', 'NLD', 'DEU'], fact: 'Taiwan makes most of the world\'s most advanced computer chips - they may be inside your tablet!' },
+  { id: 'w-wool', resource: 'Wool', emoji: '🐑', answer: 'AUS', alsoOk: ['CHN', 'NZL', 'GBR', 'TUR', 'IRN', 'ARG', 'ZAF', 'RUS', 'MAR'], fact: 'Australia has tens of millions of sheep and is famous for soft merino wool.' },
+  { id: 'w-uranium', resource: 'Uranium', emoji: '⚛️', answer: 'KAZ', alsoOk: ['CAN', 'NAM', 'AUS', 'UZB', 'RUS', 'NER', 'CHN', 'USA', 'IND', 'ZAF', 'UKR'], fact: 'Kazakhstan mines the most uranium, used in nuclear power stations.' },
+  { id: 'w-ginseng', resource: 'Ginseng', emoji: '🌱', answer: 'KOR', alsoOk: ['CHN', 'CAN', 'USA', 'PRK', 'JPN'], fact: 'Korean ginseng is a famous root used in medicine and drinks.' },
+];
+
+export const WORLD_PHYSICAL: PhysicalFeature[] = [
+  { id: 'nile', name: 'Nile', kind: 'river', emoji: '🌊', fact: 'The Nile in Africa is usually called the longest river in the world. It flows north into the Mediterranean Sea.' },
+  { id: 'amazon', name: 'Amazon', kind: 'river', emoji: '🌊', fact: 'The Amazon in South America carries more water than any other river on Earth.' },
+  { id: 'yangtze', name: 'Yangtze', kind: 'river', emoji: '🌊', fact: 'The Yangtze is the longest river in Asia. It flows across China.' },
+  { id: 'mississippi', name: 'Mississippi', kind: 'river', emoji: '🌊', fact: 'The Mississippi is the big river of the USA, flowing south into the Gulf of Mexico.' },
+  { id: 'danube', name: 'Danube', kind: 'river', emoji: '🌊', fact: 'The Danube flows through 10 countries in Europe - more than any other river.' },
+  { id: 'mekong', name: 'Mekong', kind: 'river', emoji: '🌊', fact: 'The Mekong flows from Tibet through Southeast Asia to Vietnam.' },
+  { id: 'han', name: 'Han (Seoul)', kind: 'river', emoji: '🌊', fact: 'The Han River flows right through the middle of Seoul in South Korea.' },
+  { id: 'sahara', name: 'Sahara Desert', kind: 'desert', emoji: '🏜️', fact: 'The Sahara is the biggest hot desert on Earth - almost as big as the USA.' },
+  { id: 'gobi', name: 'Gobi Desert', kind: 'desert', emoji: '🐫', fact: 'The Gobi is a cold desert in Mongolia and China. Dinosaur eggs were found there!' },
+  { id: 'atacama', name: 'Atacama Desert', kind: 'desert', emoji: '🌵', fact: 'The Atacama in Chile is one of the driest places on Earth.' },
+  { id: 'kalahari', name: 'Kalahari Desert', kind: 'desert', emoji: '🏜️', fact: 'The Kalahari is a sandy desert in southern Africa.' },
+  { id: 'andes', name: 'Andes', kind: 'mountains', emoji: '⛰️', fact: 'The Andes are the longest mountain range on land, running down South America.' },
+  { id: 'rockies', name: 'Rocky Mountains', kind: 'mountains', emoji: '⛰️', fact: 'The Rocky Mountains run through Canada and the USA.' },
+  { id: 'alps', name: 'Alps', kind: 'mountains', emoji: '🏔️', fact: 'The Alps are Europe\'s most famous mountains, running through Switzerland, France, Italy and Austria.' },
+  { id: 'himalayas', name: 'Himalayas', kind: 'mountains', emoji: '🏔️', fact: 'The Himalayas have the highest mountains on Earth, including Mount Everest.' },
+  { id: 'urals', name: 'Ural Mountains', kind: 'mountains', emoji: '⛰️', fact: 'The Ural Mountains in Russia mark the line between Europe and Asia.' },
+  { id: 'greatdividing', name: 'Great Dividing Range', kind: 'mountains', emoji: '⛰️', fact: 'The Great Dividing Range runs along the east of Australia.' },
+  { id: 'amazonbasin', name: 'Amazon Rainforest', kind: 'plain', emoji: '🌳', fact: 'The Amazon is the biggest rainforest on Earth. It is home to millions of kinds of animals and plants.' },
+  { id: 'tibet', name: 'Tibetan Plateau', kind: 'plateau', emoji: '🟫', fact: 'The Tibetan Plateau is the highest and biggest plateau - the "Roof of the World".' },
+];
+
+/** Region ids from physical.json that belong on each map. */
+export const INDIA_AREA_IDS = ['thar', 'deccan', 'gangesplain', 'sundarbans'];
+export const WORLD_AREA_IDS = ['sahara', 'gobi', 'atacama', 'kalahari', 'andes', 'rockies', 'alps', 'himalayas', 'urals', 'greatdividing', 'amazonbasin', 'tibet'];
+export const INDIA_RIVER_IDS = ['ganga', 'yamuna', 'brahmaputra', 'godavari', 'krishna', 'kaveri', 'narmada', 'tapi', 'mahanadi', 'indus', 'sutlej', 'chambal', 'ghaghara', 'tungabhadra'];
+export const WORLD_RIVER_IDS = ['nile', 'amazon', 'yangtze', 'mississippi', 'danube', 'mekong', 'han', 'huanghe', 'volga', 'congo', 'niger', 'murray', 'rhine', 'thames', 'ganga', 'brahmaputra', 'indus', 'tigris', 'euphrates', 'zambezi', 'stlawrence', 'parana', 'chaophraya'];
